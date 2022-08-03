@@ -8,52 +8,116 @@ using UnityEngine.UI;
 
 public class PlayerControler : MonoBehaviour
 {
-    //unchanged variable 
+    /*-----------unchanged variable - control bird up and down-----------*/
     [SerializeField] private float force;
     [SerializeField] private float gravity;
     [SerializeField] private ForceMode forceMode;
     [SerializeField] private float maxHeightThreshold;
-
-    public GameOverScreen GameOverScreen;
-    public GameObject tunnelObj;
-
+    [SerializeField] private float minHeightThreshold;
     private Rigidbody playerRB;
-    public GameManager manager;
+
+    /*---------------------- Game over ----------------------*/
+    public GameOverScreen GameOverScreen;
     private bool playerIsAlive = true;
+
+    /*---------------------- Score ----------------------*/
     [SerializeField] private TextMeshProUGUI scoreText;
     private int score = 0;
 
+    /*---------------------- Add timer ----------------------*/
+    public float timeRemaining = 120; //60 seconds 
+    public bool timerIsRunning = false;
+    public TextMeshProUGUI timeText;
+
+    /*---------------------- Add armband ----------------------*/
+    public ThalmicMyo rightHand;
+    private Thalmic.Myo.Pose lastPose = Thalmic.Myo.Pose.Rest;
+    private bool makeFist = false;
+
+
+    /*  public GameObject tunnelObj;
+        public GameManager manager;
+    */
 
     // Start is called before the first frame update
     void Start()
     {
         playerRB = GetComponent<Rigidbody>();
-        //manager.OnPlayerDeath.AddListener(OnPlayerDeath);
+        timerIsRunning = true;
     }
 
-    // Update is called once per frame
+
+    void Update()
+    {
+        if (playerIsAlive && timerIsRunning)
+        {
+            /*---------------------- Timer Setter ----------------------*/
+            if (timeRemaining > 0)
+            {
+                timeRemaining -= Time.deltaTime;
+                DisplayTime(timeRemaining);
+            }
+            else
+            {
+                Debug.Log("Time has run out!");
+                timeRemaining = 0;
+                timerIsRunning = false;
+            }
+
+            /*---------------------- Myo Setter ----------------------*/
+            if (lastPose != rightHand.pose)
+            {
+                lastPose = rightHand.pose;
+                makeFist = false;
+            }
+            if (rightHand.pose.ToString() == "Fist" && transform.position.y <= maxHeightThreshold && !makeFist)
+            {
+                playerRB.AddForce(Vector3.up * force, forceMode);
+                makeFist = true;
+            }
+            playerRB.AddForce(Vector3.down * gravity, ForceMode.Acceleration);
+        }
+    }
+
+    void DisplayTime(float timeToDisplay)
+    {
+        timeToDisplay += 1;
+        float minutes = Mathf.FloorToInt(timeToDisplay / 60);
+        float seconds = Mathf.FloorToInt(timeToDisplay % 60);
+        timeText.text = "Time left: " + string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+
+
+ /*   // Update is called once per frame
     void FixedUpdate()
     {
-        if (!playerIsAlive)
+        if (!playerIsAlive || !timerIsRunning)
         {
             return;
         }
-
-        if (Input.GetKeyDown(KeyCode.Space) && transform.position.y <= maxHeightThreshold)
+        if (rightHand.pose.ToString() == "Fist" && transform.position.y <= maxHeightThreshold)
         {
             playerRB.AddForce(Vector3.up * force, forceMode);
         }
         playerRB.AddForce(Vector3.down * gravity, ForceMode.Acceleration);
-    }
+        if (Input.GetKeyDown(KeyCode.UpArrow) && transform.position.y <= maxHeightThreshold)
+        {
+            playerRB.AddForce(Vector3.up * force, forceMode);
+        }
+        if (Input.GetKeyDown(KeyCode.DownArrow) && transform.position.y >= minHeightThreshold)
+        {
+            playerRB.AddForce(Vector3.down * gravity, forceMode);
+            // playerRB.AddForce(Vector3.down * gravity, ForceMode.Acceleration);
+        }
+    }*/
 
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag == "Ground" || other.gameObject.tag == "Tunnel")
+        if (other.gameObject.tag == "Ground" || other.gameObject.tag == "Tunnel" || !timerIsRunning)
         {
             playerIsAlive = false;
             GameOverScreen.Setup(score);
-            //tunnelObj.isAlive();
         }
         if (other.gameObject.tag == "ScoreTrigger" && playerIsAlive)
         {
@@ -66,7 +130,7 @@ public class PlayerControler : MonoBehaviour
     void SetScore()
     {
         //NullReferenceException: Object reference not set to an instance of an object Solution
-        scoreText.text = score.ToString();
+        scoreText.text = "Score: " + score.ToString();
     }
 
 }
