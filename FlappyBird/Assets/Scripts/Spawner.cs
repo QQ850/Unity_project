@@ -39,7 +39,9 @@ public class Spawner : MonoBehaviour
 
             var gapPosition = Random.Range(gapRange.x, gapRange.y);
             scoreTriggerPool.transform.position = new Vector3(xPos, gapPosition, zPos);
+            /*
             topTunnel.transform.Rotate(180f, 0, 0, Space.World);
+            bottomTunnel.transform.Rotate(0, 0, 0, Space.World);*/
             bottomTunnel.transform.position = new Vector3(xPos, gapPosition - gapSize - bottomTunnel.transform.localScale.y / 2, zPos);
             
             //topTunnel.transform.Rotate(180f, 0, 0, Space.World);
