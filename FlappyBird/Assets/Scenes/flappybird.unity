@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.6413465, g: 0.86585695, b: 0.88078904, a: 1}
+  m_IndirectSpecularColor: {r: 0.64134645, g: 0.8658572, b: 0.880789, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8af6d24be9c70c546a5fe765993c8928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 2458599256740799526, guid: c40e8eefdea700a4da44f68fa4a99a0a, type: 3}
+  prefab: {fileID: 1567064383092736853, guid: ae8cc1ad9b8678c44929a5ffb63ec3b8, type: 3}
 --- !u!4 &37713148
 Transform:
   m_ObjectHideFlags: 0
@@ -1770,6 +1770,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1742103335}
   m_CullTransparentMesh: 1
+--- !u!114 &1782943464 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 11400000, guid: 863250160b56e46dbb2d227833b7338a, type: 3}
+  m_PrefabInstance: {fileID: 1456439575}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 917262f8ecbe7423583085eb03acfbb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1787081557
 GameObject:
   m_ObjectHideFlags: 0
@@ -2211,9 +2222,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 119701bd974e8eb4e9748b0f3edbd2bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 4
-  gapRange: {x: -4, y: 11}
-  gapSize: 6
+  spawnRate: 6
+  gapRange: {x: 1, y: 5}
+  gapSize: 18
   xPos: 25
   zPos: 36
   tunnelPool: {fileID: 37713147}
@@ -2426,11 +2437,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4051896912138683451, guid: 9a0d8168ed4fbbf4cb38921dcbbf57c9, type: 3}
       propertyPath: force
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4051896912138683451, guid: 9a0d8168ed4fbbf4cb38921dcbbf57c9, type: 3}
       propertyPath: gravity
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4051896912138683451, guid: 9a0d8168ed4fbbf4cb38921dcbbf57c9, type: 3}
       propertyPath: manager
@@ -2440,6 +2451,10 @@ PrefabInstance:
       propertyPath: timeText
       value: 
       objectReference: {fileID: 877444655}
+    - target: {fileID: 4051896912138683451, guid: 9a0d8168ed4fbbf4cb38921dcbbf57c9, type: 3}
+      propertyPath: rightHand
+      value: 
+      objectReference: {fileID: 1782943464}
     - target: {fileID: 4051896912138683451, guid: 9a0d8168ed4fbbf4cb38921dcbbf57c9, type: 3}
       propertyPath: scoreText
       value: 

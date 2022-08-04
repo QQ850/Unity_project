@@ -42,10 +42,10 @@ public class Spawner : MonoBehaviour
             /*
             topTunnel.transform.Rotate(180f, 0, 0, Space.World);
             bottomTunnel.transform.Rotate(0, 0, 0, Space.World);*/
-            bottomTunnel.transform.position = new Vector3(xPos, gapPosition - gapSize - bottomTunnel.transform.localScale.y / 2, zPos);
+            bottomTunnel.transform.position = new Vector3(xPos, gapPosition - gapSize/* - bottomTunnel.transform.localScale.y / 2*/, zPos);
             
             //topTunnel.transform.Rotate(180f, 0, 0, Space.World);
-            topTunnel.transform.position = new Vector3(xPos, gapPosition + gapSize + topTunnel.transform.localScale.y / 2, zPos);
+            topTunnel.transform.position = new Vector3(xPos, gapPosition + gapSize/* + topTunnel.transform.localScale.y / 2*/, zPos);
 
         }
     }

@@ -31,8 +31,8 @@ public class PlayerControler : MonoBehaviour
 
     /*---------------------- Add armband ----------------------*/
     public ThalmicMyo rightHand;
-    private Thalmic.Myo.Pose lastPose = Thalmic.Myo.Pose.Rest;
-    private bool makeFist = false;
+    public Thalmic.Myo.Pose lastPose = Thalmic.Myo.Pose.Rest;
+    public bool makeFist = false;
 
 
     /*  public GameObject tunnelObj;
@@ -63,14 +63,14 @@ public class PlayerControler : MonoBehaviour
                 timeRemaining = 0;
                 timerIsRunning = false;
             }
-
+            
             /*---------------------- Myo Setter ----------------------*/
             if (lastPose != rightHand.pose)
             {
                 lastPose = rightHand.pose;
                 makeFist = false;
             }
-            if (rightHand.pose.ToString() == "Fist" && transform.position.y <= maxHeightThreshold && !makeFist)
+            if (rightHand.pose.ToString() == "Fist" && /*transform.position.y <= maxHeightThreshold &&*/ !makeFist)
             {
                 playerRB.AddForce(Vector3.up * force, forceMode);
                 makeFist = true;
