@@ -32,18 +32,16 @@ public class PlayerControler : MonoBehaviour
     /*---------------------- Add armband ----------------------*/
     public ThalmicMyo rightHand;
     public Thalmic.Myo.Pose lastPose = Thalmic.Myo.Pose.Rest;
-    public bool makeFist = false;
+    public bool makeWaveIn = false;
+    public bool makeWaveOut = false;
 
-
-    /*  public GameObject tunnelObj;
-        public GameManager manager;
-    */
 
     // Start is called before the first frame update
     void Start()
     {
         playerRB = GetComponent<Rigidbody>();
         timerIsRunning = true;
+        //X = weapon.transform.position.x;
     }
 
 
@@ -68,14 +66,22 @@ public class PlayerControler : MonoBehaviour
             if (lastPose != rightHand.pose)
             {
                 lastPose = rightHand.pose;
-                makeFist = false;
+                makeWaveIn = false;
+                makeWaveOut = false;
             }
-            if (rightHand.pose.ToString() == "Fist" && /*transform.position.y <= maxHeightThreshold &&*/ !makeFist)
+
+            if (rightHand.pose.ToString() == "WaveIn" && !makeWaveIn)
             {
                 playerRB.AddForce(Vector3.up * force, forceMode);
-                makeFist = true;
+                makeWaveIn = true;
             }
-            playerRB.AddForce(Vector3.down * gravity, ForceMode.Acceleration);
+            if (rightHand.pose.ToString() == "WaveOut" && !makeWaveOut)
+            {
+                playerRB.AddForce(Vector3.down * force, forceMode);
+                makeWaveOut = true;
+            }
+
+           
         }
     }
 
@@ -88,33 +94,10 @@ public class PlayerControler : MonoBehaviour
     }
 
 
- /*   // Update is called once per frame
-    void FixedUpdate()
-    {
-        if (!playerIsAlive || !timerIsRunning)
-        {
-            return;
-        }
-        if (rightHand.pose.ToString() == "Fist" && transform.position.y <= maxHeightThreshold)
-        {
-            playerRB.AddForce(Vector3.up * force, forceMode);
-        }
-        playerRB.AddForce(Vector3.down * gravity, ForceMode.Acceleration);
-        if (Input.GetKeyDown(KeyCode.UpArrow) && transform.position.y <= maxHeightThreshold)
-        {
-            playerRB.AddForce(Vector3.up * force, forceMode);
-        }
-        if (Input.GetKeyDown(KeyCode.DownArrow) && transform.position.y >= minHeightThreshold)
-        {
-            playerRB.AddForce(Vector3.down * gravity, forceMode);
-            // playerRB.AddForce(Vector3.down * gravity, ForceMode.Acceleration);
-        }
-    }*/
-
-
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag == "Ground" || other.gameObject.tag == "Tunnel" || !timerIsRunning)
+
+        if (other.gameObject.tag == "Ground" || other.gameObject.tag == "Tunnel" || other.gameObject.tag == "Block" || !timerIsRunning)
         {
             playerIsAlive = false;
             GameOverScreen.Setup(score);

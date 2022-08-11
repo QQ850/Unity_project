@@ -9,7 +9,7 @@ public class TunnelControler : MonoBehaviour
 
     void Start()
     {
-        //manager.OnPlayerDeath.AddListener(OnPlayerDeath);
+     
     }
     // Update is called once per frame
     void Update()
@@ -17,8 +17,4 @@ public class TunnelControler : MonoBehaviour
         transform.position += Vector3.left * speed * Time.deltaTime;
     }
 
-    private void OnPlayerDeath()
-    {
-        speed = 0f;
-    }
 }

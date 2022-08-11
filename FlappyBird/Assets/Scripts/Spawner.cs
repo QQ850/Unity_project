@@ -5,22 +5,26 @@ using UnityEngine;
 //[RequireComponent(typeof(ObjectPool))]
 public class Spawner : MonoBehaviour
 {
+    /*------------------- Tunnel & scoreTrigger's rate & position -------------------*/
     [SerializeField] private float spawnRate;
     [SerializeField] private Vector2 gapRange;
     [SerializeField] private float gapSize;
     [SerializeField] private float xPos;
     [SerializeField] private float zPos;
 
+    /*------------------ Block's rate & position---------------------*/
+    [SerializeField] private Vector2 blockRange;
+
+    /*------------------- objects pool -------------------*/
     [SerializeField] private ObjectPool tunnelPool;
     [SerializeField] private ObjectPool scoreTriggerPool;
+    [SerializeField] private ObjectPool blockPool;
 
-    private bool playerIsAlive = true;
 
+    
     // Start is called before the first frame update
     void Start()
-    {
-        //manager.OnPlayerDeath.AddListener(OnPlayerDeath);
-        //tunnelPool = GetComponent<ObjectPool> ();
+    { 
         StartCoroutine(SpawnAsync());
         
     }
@@ -29,34 +33,44 @@ public class Spawner : MonoBehaviour
     private IEnumerator SpawnAsync()
     {
 
-        while (playerIsAlive)
+        while (true)
         {
+            /*-------------- spawn tunnel and score trigger-------------*/
+            for (int i = 0; i < 1; i++)
+            {
+                yield return new WaitForSeconds(spawnRate);
+                /*----------------- get tunnels------------------*/
+                var topTunnel = tunnelPool.GetFromPool();
+                var bottomTunnel = tunnelPool.GetFromPool();
+                /*----------------- get scoreTrigger------------------*/
+                var scoreTrigger = scoreTriggerPool.GetFromPool();
+
+
+                /*------------------- Spawn Objects ------------------*/
+                var gapPosition = Random.Range(gapRange.x, gapRange.y);
+                scoreTrigger.transform.position = new Vector3(xPos, gapPosition, zPos);  
+                bottomTunnel.transform.position = new Vector3(xPos, gapPosition - gapSize/* - bottomTunnel.transform.localScale.y / 2*/, zPos);
+                topTunnel.transform.position = new Vector3(xPos, gapPosition + gapSize/* + topTunnel.transform.localScale.y / 2*/, zPos);
+
+            }
+
             yield return new WaitForSeconds(spawnRate);
-            //spawn tunnels 
-            var topTunnel = tunnelPool.GetFromPool();
-            var bottomTunnel = tunnelPool.GetFromPool();
-            var scoreTrigger = scoreTriggerPool.GetFromPool();
 
-            var gapPosition = Random.Range(gapRange.x, gapRange.y);
-            scoreTriggerPool.transform.position = new Vector3(xPos, gapPosition, zPos);
-            /*
-            topTunnel.transform.Rotate(180f, 0, 0, Space.World);
-            bottomTunnel.transform.Rotate(0, 0, 0, Space.World);*/
-            bottomTunnel.transform.position = new Vector3(xPos, gapPosition - gapSize/* - bottomTunnel.transform.localScale.y / 2*/, zPos);
-            
-            //topTunnel.transform.Rotate(180f, 0, 0, Space.World);
-            topTunnel.transform.position = new Vector3(xPos, gapPosition + gapSize/* + topTunnel.transform.localScale.y / 2*/, zPos);
+            /*-------------- spawn blocks -------------- */
+           for (int i = 0; i < 10; i++)
+           {
+               yield return new WaitForSeconds(spawnRate);
+               var gapPosition = Random.Range(blockRange.x, blockRange.y);
+               var Block = blockPool.GetFromPool();           
+               Block.transform.position = new Vector3(xPos, gapPosition, zPos);
+           }
+       }
 
+   }
+
+
+   /*   private void OnPlayerDeath()
+      {
+          StopAllCoroutines();
+      }*/
         }
-    }
-
-    public void isAlive()
-    {
-        playerIsAlive = false;
-    }
-
-    /*   private void OnPlayerDeath()
-       {
-           StopAllCoroutines();
-       }*/
-}
