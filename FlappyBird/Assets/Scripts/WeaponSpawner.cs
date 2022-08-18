@@ -6,22 +6,17 @@ public class WeaponSpawner : MonoBehaviour
 {
     /*------------Object & position-------------*/
     public GameObject objectToSpawn;
-    public float xPos;
-    public float yPos;
-    public float zPos;
+    public GameObject player;
 
     /*---------------------- Add armband ----------------------*/
     public ThalmicMyo rightHand;
     public Thalmic.Myo.Pose lastPose = Thalmic.Myo.Pose.Rest;  
     public bool makeFist = false;
 
-    /*------------------- objects pool -------------------*/
-    [SerializeField] private ObjectPool weaponPool;
 
     // Start is called before the first frame update
     void Start()
     {
-        //StartCoroutine(SpawnAsync());
 
     }
 
@@ -44,27 +39,20 @@ public class WeaponSpawner : MonoBehaviour
 
     private void SpawnObject()
     {
-        var weapon = weaponPool.GetFromPool();
-        weapon.transform.position = new Vector3(xPos, yPos, zPos);
+        GameObject weapon = Instantiate(objectToSpawn);
+        weapon.transform.position = new Vector3(-27.5f , player.transform.position.y + 6, 72f);
 
     }
 
-    /*
-    private IEnumerator SpawnAsync()
+    /*private void OnCollisionEnter(Collision other)
     {
-        if (lastPose != rightHand.pose)
+        string str = other.gameObject.tag;
+        Debug.Log(str);
+        if (other.gameObject.tag == "Block")
         {
-            lastPose = rightHand.pose;
-            makeFist = false;
+            Debug.Log("block");
+            Destroy(other.gameObject);
         }
 
-        if (rightHand.pose.ToString() == "Fist" && !makeFist)
-        {
-            var weapon = weaponPool.GetFromPool();
-            weapon.transform.position = new Vector3(xPos, yPos, zPos);
-            makeFist = true;
-        }
-        yield return new WaitForSeconds(3f);
-    }
-   */
+    }*/
 }

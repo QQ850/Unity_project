@@ -6,7 +6,7 @@ public class weaponColtrol : MonoBehaviour
 {
 
     [SerializeField] private float speed;
-
+ 
     void Start()
     {
 
@@ -20,9 +20,15 @@ public class weaponColtrol : MonoBehaviour
    /*---------------Destory blocks----------------*/
     private void OnCollisionEnter(Collision other)
     {
+       if (other.gameObject.tag != "Player")
+        {
+            string str = other.gameObject.tag;
+            Debug.Log(str);
+        }
 
         if (other.gameObject.tag == "Block")
         {
+            Debug.Log("block");
             Destroy(other.gameObject);
         }
 
