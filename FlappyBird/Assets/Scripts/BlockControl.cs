@@ -22,4 +22,15 @@ public class BlockControl : MonoBehaviour
     {
         speed = 0f;
     }
+
+    /*---------------Destory blocks----------------*/
+    private void OnCollisionEnter(Collision other)
+    {
+
+        if (other.gameObject.tag == "Weapon")
+        {       
+            Destroy(this.gameObject);
+        }
+
+    }
 }

@@ -369,6 +369,7 @@
 "Assets/Scripts/ObjectPool.cs"
 "Assets/Scripts/PlayerControler.cs"
 "Assets/Scripts/Spawner.cs"
+"Assets/Scripts/TimeUpScreen.cs"
 "Assets/Scripts/TunnelControler.cs"
 "Assets/Scripts/TunnelTrigger.cs"
 "Assets/Scripts/weaponColtrol.cs"

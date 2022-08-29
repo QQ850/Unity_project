@@ -19,6 +19,9 @@ public class PlayerControler : MonoBehaviour
     /*---------------------- Game over ----------------------*/
     public GameOverScreen GameOverScreen;
     private bool playerIsAlive = true;
+   
+    /*---------------------- Time over ----------------------*/
+    public TimeUpScreen TimeUprScreen;
 
     /*---------------------- Score ----------------------*/
     [SerializeField] private TextMeshProUGUI scoreText;
@@ -57,9 +60,9 @@ public class PlayerControler : MonoBehaviour
             }
             else
             {
-                Debug.Log("Time has run out!");
                 timeRemaining = 0;
                 timerIsRunning = false;
+                //TimeUprScreen.Setup(score);
             }
             
             /*---------------------- Myo Setter ----------------------*/
@@ -90,7 +93,7 @@ public class PlayerControler : MonoBehaviour
         timeToDisplay += 1;
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
-        timeText.text = "Time left: " + string.Format("{0:00}:{1:00}", minutes, seconds);
+        timeText.text = "Time Remaining: " + string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
 

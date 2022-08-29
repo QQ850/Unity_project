@@ -9,6 +9,7 @@ TagManager:
   - ScoreTrigger
   - Block
   - weaponBalls
+  - Weapon
   layers:
   - Default
   - TransparentFX

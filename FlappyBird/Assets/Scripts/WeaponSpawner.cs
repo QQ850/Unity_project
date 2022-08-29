@@ -40,19 +40,8 @@ public class WeaponSpawner : MonoBehaviour
     private void SpawnObject()
     {
         GameObject weapon = Instantiate(objectToSpawn);
-        weapon.transform.position = new Vector3(-27.5f , player.transform.position.y + 6, 72f);
+        weapon.transform.position = new Vector3(-14f , player.transform.position.y, 36f);
 
     }
 
-    /*private void OnCollisionEnter(Collision other)
-    {
-        string str = other.gameObject.tag;
-        Debug.Log(str);
-        if (other.gameObject.tag == "Block")
-        {
-            Debug.Log("block");
-            Destroy(other.gameObject);
-        }
-
-    }*/
 }

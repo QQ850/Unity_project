@@ -36,7 +36,7 @@ public class Spawner : MonoBehaviour
         while (true)
         {
             /*-------------- spawn tunnel and score trigger-------------*/
-            for (int i = 0; i < 1; i++)
+            for (int i = 0; i < 10; i++)
             {
                 yield return new WaitForSeconds(spawnRate);
                 /*----------------- get tunnels------------------*/
@@ -64,9 +64,35 @@ public class Spawner : MonoBehaviour
                var Block = blockPool.GetFromPool();           
                Block.transform.position = new Vector3(xPos, gapPosition, zPos);
            }
-       }
 
-   }
+            yield return new WaitForSeconds(spawnRate);
+
+            /*-------------- spawn both -------------- */
+            for (int i = 0; i < 10; i++)
+            {
+                yield return new WaitForSeconds(spawnRate);
+              
+                var topTunnel = tunnelPool.GetFromPool();
+                var bottomTunnel = tunnelPool.GetFromPool();  
+                var scoreTrigger = scoreTriggerPool.GetFromPool();
+
+
+                /*------------------- Spawn Objects ------------------*/
+                var gapPosition = Random.Range(gapRange.x, gapRange.y);
+                scoreTrigger.transform.position = new Vector3(xPos, gapPosition, zPos);
+                bottomTunnel.transform.position = new Vector3(xPos, gapPosition - gapSize/* - bottomTunnel.transform.localScale.y / 2*/, zPos);
+                topTunnel.transform.position = new Vector3(xPos, gapPosition + gapSize/* + topTunnel.transform.localScale.y / 2*/, zPos);
+
+                /*-------------- spawn blocks -------------- */
+                yield return new WaitForSeconds(spawnRate);
+                gapPosition = Random.Range(blockRange.x, blockRange.y);
+                var Block = blockPool.GetFromPool();
+                Block.transform.position = new Vector3(xPos, gapPosition, zPos);
+
+            }
+        }
+
+    }
 
 
    /*   private void OnPlayerDeath()
