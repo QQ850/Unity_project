@@ -1,6 +1,6 @@
 # Unity_project
 ## 1. Flappy Bird Game 
-#### Software tools:        Blander, Unity3D, Visual Studio 
+#### Software tools:        Blender, Unity3D, Visual Studio 
 #### Programming language:  C#
 #### Hardware tool:         Myo armbands 
 
