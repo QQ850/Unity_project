@@ -8,4 +8,4 @@
 ## 2. League of Legends
 #### Software tools:        Unity3D
 #### Programming language:  C#
-#### Hardware tool:         VR HeadSet and hand Controler  
+#### Hardware tool:         VR HeadSet and hand controller   
