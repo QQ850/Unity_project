@@ -5,20 +5,34 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637944559640930938
-    m_Hash: 3693497500
+      ticks: 638196907779725348
+    m_Hash: 1483273338
   m_LockFileStatus:
     m_FilePath: C:/Users/qiqihu/Desktop/LOLProject/Unity_project/FlappyBird/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637944559640930938
-    m_Hash: 1344799166
+      ticks: 638196907779835330
+    m_Hash: 4198485729
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
-  m_LocalFileStatus: []
+  m_LocalFileStatus:
+  - m_FilePath: C:\Users\qiqihu\Desktop\LOLProject\Unity_project\FlappyBird\Assets\SteamVR\OpenVRUnityXRPackage\Editor\com.valvesoftware.unity.openvr-1.1.4.tgz/package.json
+    m_PathExists: 0
+    m_ContentTrackingEnabled: 1
+    m_ModificationDate:
+      serializedVersion: 2
+      ticks: 0
+    m_Hash: 0
+  - m_FilePath: C:\Users\qiqihu\Desktop\LOLProject\Unity_project\FlappyBird\Assets\SteamVR\OpenVRUnityXRPackage\Editor\com.valvesoftware.unity.openvr-1.1.4.tgz
+    m_PathExists: 1
+    m_ContentTrackingEnabled: 1
+    m_ModificationDate:
+      serializedVersion: 2
+      ticks: 637497179250000000
+    m_Hash: 2919789393
 m_ProjectPath: C:/Users/qiqihu/Desktop/LOLProject/Unity_project/FlappyBird/Packages
 m_EditorVersion: 2021.3.5f1 (40eb3a945986)
 m_ResolvedPackages:
@@ -36,7 +50,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: Editor
-  type: 
+  type: asset
   description: The Version Control package gives you the ability to use either Collaborate
     or Plastic SCM for Unity (beta) in the Unity editor. To use Plastic SCM for Unity
     (beta), a Plastic SCM subscription is required. Learn more about how you can
@@ -95,6 +109,8 @@ m_ResolvedPackages:
     - 1.17.0
     - 1.17.1
     - 1.17.2
+    - 1.17.6
+    - 1.17.7
     - 2.0.0-preview.6
     - 2.0.0-preview.8
     - 2.0.0-preview.15
@@ -102,6 +118,10 @@ m_ResolvedPackages:
     - 2.0.0-preview.20
     - 2.0.0-preview.21
     - 2.0.0-preview.22
+    - 2.0.0
+    - 2.0.1
+    - 2.0.3
+    - 2.0.4
     - 2.1.0-preview.3
     - 2.1.0-preview.5
     - 2.1.0-preview.6
@@ -110,6 +130,8 @@ m_ResolvedPackages:
     - 1.17.0
     - 1.17.1
     - 1.17.2
+    - 1.17.6
+    - 1.17.7
     - 2.0.0-preview.6
     - 2.0.0-preview.8
     - 2.0.0-preview.15
@@ -117,6 +139,10 @@ m_ResolvedPackages:
     - 2.0.0-preview.20
     - 2.0.0-preview.21
     - 2.0.0-preview.22
+    - 2.0.0
+    - 2.0.1
+    - 2.0.3
+    - 2.0.4
     - 2.1.0-preview.3
     - 2.1.0-preview.5
     - 2.1.0-preview.6
@@ -154,7 +180,7 @@ m_ResolvedPackages:
     scopes: []
     isDefault: 1
     capabilities: 7
-  hideInEditor: 1
+  hideInEditor: 0
   isAssetStorePackage: 0
   datePublishedTicks: 637888962690000000
   documentationUrl: 
@@ -267,7 +293,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: asset
   description: The JetBrains Rider Editor package provides an integration for using
     the JetBrains Rider IDE as a code editor for Unity. It adds support for generating
     .csproj files for code completion and auto-discovery of installations.
@@ -306,10 +332,20 @@ m_ResolvedPackages:
     - 3.0.13
     - 3.0.14
     - 3.0.15
+    - 3.0.16
+    - 3.0.17
+    - 3.0.18
+    - 3.0.20
+    - 3.0.21
     compatible:
     - 3.0.14
     - 3.0.15
-    verified: 3.0.15
+    - 3.0.16
+    - 3.0.17
+    - 3.0.18
+    - 3.0.20
+    - 3.0.21
+    verified: 3.0.21
   dependencies:
   - name: com.unity.ext.nunit
     version: 1.0.6
@@ -324,7 +360,7 @@ m_ResolvedPackages:
     scopes: []
     isDefault: 1
     capabilities: 7
-  hideInEditor: 1
+  hideInEditor: 0
   isAssetStorePackage: 0
   datePublishedTicks: 637914298700000000
   documentationUrl: 
@@ -351,7 +387,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: asset
   description: Code editor integration for supporting Visual Studio as code editor
     for unity. Adds support for generating csproj files for intellisense purposes,
     auto discovery of installations, etc.
@@ -378,10 +414,14 @@ m_ResolvedPackages:
     - 2.0.14
     - 2.0.15
     - 2.0.16
+    - 2.0.17
+    - 2.0.18
     compatible:
     - 2.0.15
     - 2.0.16
-    verified: 2.0.16
+    - 2.0.17
+    - 2.0.18
+    verified: 2.0.18
   dependencies:
   - name: com.unity.test-framework
     version: 1.1.9
@@ -402,7 +442,7 @@ m_ResolvedPackages:
     scopes: []
     isDefault: 1
     capabilities: 7
-  hideInEditor: 1
+  hideInEditor: 0
   isAssetStorePackage: 0
   datePublishedTicks: 637914298680000000
   documentationUrl: 
@@ -429,7 +469,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: asset
   description: Code editor integration for supporting Visual Studio Code as code
     editor for unity. Adds support for generating csproj files for intellisense purposes,
     auto discovery of installations, etc.
@@ -463,7 +503,7 @@ m_ResolvedPackages:
     scopes: []
     isDefault: 1
     capabilities: 7
-  hideInEditor: 1
+  hideInEditor: 0
   isAssetStorePackage: 0
   datePublishedTicks: 637800255360000000
   documentationUrl: 
@@ -490,7 +530,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: Unity Test Framework
-  type: 
+  type: asset
   description: Test framework for running Edit mode and Play mode tests in Unity.
   status: 4
   errors: []
@@ -530,13 +570,25 @@ m_ResolvedPackages:
     - 1.1.30
     - 1.1.31
     - 1.1.33
+    - 1.3.0
+    - 1.3.1
+    - 1.3.2
+    - 1.3.3
+    - 1.3.4
     - 2.0.1-exp.1
+    - 2.0.1-exp.2
     - 2.0.1-pre.12
     - 2.0.1-pre.18
     compatible:
     - 1.1.31
     - 1.1.33
+    - 1.3.0
+    - 1.3.1
+    - 1.3.2
+    - 1.3.3
+    - 1.3.4
     - 2.0.1-exp.1
+    - 2.0.1-exp.2
     - 2.0.1-pre.12
     - 2.0.1-pre.18
     verified: 1.1.33
@@ -564,7 +616,7 @@ m_ResolvedPackages:
     scopes: []
     isDefault: 1
     capabilities: 7
-  hideInEditor: 1
+  hideInEditor: 0
   isAssetStorePackage: 0
   datePublishedTicks: 637804266210000000
   documentationUrl: 
@@ -591,7 +643,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: Text Rendering
-  type: 
+  type: asset
   description: 'TextMeshPro is the ultimate text solution for Unity. It''s the perfect
     replacement for Unity''s UI Text and the legacy Text Mesh.
 
@@ -699,12 +751,15 @@ m_ResolvedPackages:
     - 3.2.0-pre.1
     - 3.2.0-pre.2
     - 3.2.0-pre.3
+    - 3.2.0-pre.4
     - 4.0.0-pre.1
+    - 4.0.0-pre.2
     compatible:
     - 3.0.6
     - 3.2.0-pre.1
     - 3.2.0-pre.2
     - 3.2.0-pre.3
+    - 3.2.0-pre.4
     verified: 3.0.6
   dependencies:
   - name: com.unity.ugui
@@ -729,7 +784,7 @@ m_ResolvedPackages:
     scopes: []
     isDefault: 1
     capabilities: 7
-  hideInEditor: 1
+  hideInEditor: 0
   isAssetStorePackage: 0
   datePublishedTicks: 637547111200000000
   documentationUrl: 
@@ -756,7 +811,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: asset
   description: Use Unity Timeline to create cinematic content, game-play sequences,
     audio sequences, and complex particle effects.
   status: 4
@@ -831,17 +886,31 @@ m_ResolvedPackages:
     - 1.6.2
     - 1.6.3
     - 1.6.4
+    - 1.6.5
     - 1.7.0-pre.1
     - 1.7.0-pre.2
     - 1.7.0
     - 1.7.1
+    - 1.7.2
+    - 1.7.3
+    - 1.7.4
+    - 1.8.0
+    - 1.8.1
+    - 1.8.2
     compatible:
     - 1.6.4
+    - 1.6.5
     - 1.7.0-pre.1
     - 1.7.0-pre.2
     - 1.7.0
     - 1.7.1
-    verified: 1.6.4
+    - 1.7.2
+    - 1.7.3
+    - 1.7.4
+    - 1.8.0
+    - 1.8.1
+    - 1.8.2
+    verified: 1.6.5
   dependencies:
   - name: com.unity.modules.director
     version: 1.0.0
@@ -873,7 +942,7 @@ m_ResolvedPackages:
     scopes: []
     isDefault: 1
     capabilities: 7
-  hideInEditor: 1
+  hideInEditor: 0
   isAssetStorePackage: 0
   datePublishedTicks: 637789039180000000
   documentationUrl: 
@@ -910,6 +979,7 @@ m_ResolvedPackages:
   versions:
     all:
     - 1.0.0
+    - 3.0.0-exp.1
     compatible:
     - 1.0.0
     verified: 1.0.0
@@ -962,7 +1032,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: tool
   description: 'Visual scripting is a workflow that uses visual, node-based graphs
     to design behaviors rather than write lines of C# script.
 
@@ -995,8 +1065,10 @@ m_ResolvedPackages:
     - 1.7.7
     - 1.7.8
     - 1.8.0-pre.1
+    - 1.8.0
     compatible:
     - 1.7.8
+    - 1.8.0
     verified: 1.7.8
   dependencies:
   - name: com.unity.ugui
@@ -1032,6 +1104,218 @@ m_ResolvedPackages:
     path: 
   unityLifecycle:
     version: 1.7.8
+    nextVersion: 
+- packageId: com.unity.xr.management@4.3.3
+  testable: 0
+  isDirectDependency: 1
+  version: 4.3.3
+  source: 1
+  resolvedPath: C:\Users\qiqihu\Desktop\LOLProject\Unity_project\FlappyBird\Library\PackageCache\com.unity.xr.management@4.3.3
+  assetPath: Packages/com.unity.xr.management
+  name: com.unity.xr.management
+  displayName: XR Plugin Management
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: asset
+  description: Package that provides simple management of XR plug-ins. Manages and
+    offers help with loading, initialization, settings, and build support for XR
+    plug-ins.
+  status: 4
+  errors: []
+  versions:
+    all:
+    - 0.1.0-preview.8
+    - 0.1.0-preview.12
+    - 1.0.0-preview.2
+    - 2.0.0-preview.3
+    - 2.0.0-preview.6
+    - 2.0.0-preview.9
+    - 2.0.0-preview.10
+    - 2.0.0-preview.13
+    - 2.0.0-preview.21
+    - 2.0.0-preview.22
+    - 2.0.0-preview.24
+    - 2.0.0-preview.25
+    - 2.0.0-preview.26
+    - 3.0.1
+    - 3.0.2-preview.1
+    - 3.0.2-preview.2
+    - 3.0.3
+    - 3.0.4-preview.1
+    - 3.0.4-preview.3
+    - 3.0.4
+    - 3.0.5-preview.1
+    - 3.0.5
+    - 3.0.6-preview.2
+    - 3.0.6
+    - 3.1.0-preview.2
+    - 3.2.4
+    - 3.2.6
+    - 3.2.7
+    - 3.2.9
+    - 3.2.10
+    - 3.2.11-preview.1
+    - 3.2.12
+    - 3.2.13
+    - 3.2.15
+    - 3.2.16
+    - 3.2.17
+    - 4.0.0-exp.2
+    - 4.0.0-pre.2
+    - 4.0.0-pre.3
+    - 4.0.1
+    - 4.0.3
+    - 4.0.5
+    - 4.0.6
+    - 4.0.7
+    - 4.1.0-pre.1
+    - 4.1.0-pre.2
+    - 4.1.0
+    - 4.2.0
+    - 4.2.1
+    - 4.3.1
+    - 4.3.3
+    compatible:
+    - 4.2.0
+    - 4.2.1
+    - 4.3.1
+    - 4.3.3
+    verified: 4.2.1
+  dependencies:
+  - name: com.unity.modules.subsystems
+    version: 1.0.0
+  - name: com.unity.modules.vr
+    version: 1.0.0
+  - name: com.unity.modules.xr
+    version: 1.0.0
+  - name: com.unity.xr.legacyinputhelpers
+    version: 2.1.7
+  resolvedDependencies:
+  - name: com.unity.modules.subsystems
+    version: 1.0.0
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  - name: com.unity.modules.vr
+    version: 1.0.0
+  - name: com.unity.modules.physics
+    version: 1.0.0
+  - name: com.unity.modules.xr
+    version: 1.0.0
+  - name: com.unity.xr.legacyinputhelpers
+    version: 2.1.9
+  keywords:
+  - xr
+  - sdk
+  - ar
+  - vr
+  - management
+  - build
+  - plugin
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+  hideInEditor: 0
+  isAssetStorePackage: 0
+  datePublishedTicks: 638121371540000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.xr.management@4.3/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/xr.sdk.management.git
+    revision: 11953d1846a70bfe37146dc4655a8b2d93d32b95
+    path: 
+  unityLifecycle:
+    version: 4.2.0
+    nextVersion: 
+- packageId: com.valvesoftware.unity.openvr@file:C:\Users\qiqihu\Desktop\LOLProject\Unity_project\FlappyBird\Assets\SteamVR\OpenVRUnityXRPackage\Editor\com.valvesoftware.unity.openvr-1.1.4.tgz
+  testable: 0
+  isDirectDependency: 1
+  version: 1.1.4
+  source: 6
+  resolvedPath: C:\Users\qiqihu\Desktop\LOLProject\Unity_project\FlappyBird\Library\PackageCache\com.valvesoftware.unity.openvr@3ee6c452bc34
+  assetPath: Packages/com.valvesoftware.unity.openvr
+  name: com.valvesoftware.unity.openvr
+  displayName: OpenVR XR Plugin
+  author:
+    name: Valve Corporation
+    email: 
+    url: 
+  category: 
+  type: 
+  description: 'Provides rendering support for OpenVR devices in Unity XR. For input
+    please see: https://github.com/ValveSoftware/steamvr_unity_plugin'
+  status: 4
+  errors: []
+  versions:
+    all: []
+    compatible: []
+    verified: 
+  dependencies:
+  - name: com.unity.xr.management
+    version: 3.2.13
+  - name: com.unity.ugui
+    version: 1.0.0
+  - name: com.unity.xr.legacyinputhelpers
+    version: 2.1.4
+  resolvedDependencies:
+  - name: com.unity.xr.management
+    version: 4.3.3
+  - name: com.unity.modules.subsystems
+    version: 1.0.0
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  - name: com.unity.modules.vr
+    version: 1.0.0
+  - name: com.unity.modules.physics
+    version: 1.0.0
+  - name: com.unity.modules.xr
+    version: 1.0.0
+  - name: com.unity.xr.legacyinputhelpers
+    version: 2.1.9
+  - name: com.unity.ugui
+    version: 1.0.0
+  - name: com.unity.modules.ui
+    version: 1.0.0
+  - name: com.unity.modules.imgui
+    version: 1.0.0
+  keywords:
+  - openvr
+  - xr
+  - virtual
+  - reality
+  - xreditorsubsystem
+  - xrsdk
+  - steamvr
+  - vr
+  - unity
+  - sdk
+  - valve
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+  hideInEditor: 0
+  isAssetStorePackage: 0
+  datePublishedTicks: 0
+  documentationUrl: 
+  hasRepository: 0
+  repository:
+    type: 
+    url: 
+    revision: 
+    path: 
+  unityLifecycle:
+    version: 
     nextVersion: 
 - packageId: com.unity.modules.ai@1.0.0
   testable: 0
@@ -2773,6 +3057,102 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 
     nextVersion: 
+- packageId: com.unity.xr.legacyinputhelpers@2.1.9
+  testable: 0
+  isDirectDependency: 0
+  version: 2.1.9
+  source: 1
+  resolvedPath: C:\Users\qiqihu\Desktop\LOLProject\Unity_project\FlappyBird\Library\PackageCache\com.unity.xr.legacyinputhelpers@2.1.9
+  assetPath: Packages/com.unity.xr.legacyinputhelpers
+  name: com.unity.xr.legacyinputhelpers
+  displayName: XR Legacy Input Helpers
+  author:
+    name: 
+    email: 
+    url: 
+  category: XR
+  type: asset
+  description: This package includes the tracked pose driver for the legacy input
+    system, the XR Bindings Seeding Tool and 3Dof Arm Model support for the Tracked
+    Pose Driver. The Tracked Pose Driver is a behavior that enables GameObjects to
+    track input devices, the XR Bindings Seeding Tool adds a menu item under the
+    'Assets' menu which populates the Input Asset with Unity's crossplatform Input
+    Bindings
+  status: 4
+  errors: []
+  versions:
+    all:
+    - 1.0.0
+    - 1.0.2
+    - 1.0.3
+    - 1.3.1
+    - 1.3.2
+    - 1.3.4
+    - 1.3.5
+    - 1.3.6
+    - 1.3.7
+    - 1.3.8
+    - 1.3.11
+    - 2.0.1
+    - 2.0.2
+    - 2.0.4
+    - 2.0.6
+    - 2.0.8
+    - 2.1.1
+    - 2.1.2
+    - 2.1.3
+    - 2.1.4
+    - 2.1.6
+    - 2.1.7
+    - 2.1.8
+    - 2.1.9
+    - 2.1.10
+    compatible:
+    - 2.1.9
+    - 2.1.10
+    verified: 2.1.10
+  dependencies:
+  - name: com.unity.modules.vr
+    version: 1.0.0
+  - name: com.unity.modules.xr
+    version: 1.0.0
+  resolvedDependencies:
+  - name: com.unity.modules.vr
+    version: 1.0.0
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  - name: com.unity.modules.physics
+    version: 1.0.0
+  - name: com.unity.modules.xr
+    version: 1.0.0
+  - name: com.unity.modules.subsystems
+    version: 1.0.0
+  keywords:
+  - TPD
+  - Tracked Pose Driver
+  - XR
+  - Input
+  - Helpers
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+  hideInEditor: 0
+  isAssetStorePackage: 0
+  datePublishedTicks: 637812095140000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/com.unity.xr.legacyinputhelpers.git
+    revision: 8e4581a11c14b64d41aabb67f51b0d8a0c75f5c4
+    path: 
+  unityLifecycle:
+    version: 2.1.9
+    nextVersion: 
 - packageId: com.unity.ext.nunit@1.0.6
   testable: 0
   isDirectDependency: 0
@@ -2847,7 +3227,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: asset
   description: 'The editor coroutines package allows developers to start constructs
     similar to Unity''s monobehaviour based coroutines within the editor using abitrary
     objects. '
@@ -2878,7 +3258,7 @@ m_ResolvedPackages:
     scopes: []
     isDefault: 1
     capabilities: 7
-  hideInEditor: 1
+  hideInEditor: 0
   isAssetStorePackage: 0
   datePublishedTicks: 637232611380000000
   documentationUrl: 
@@ -2905,7 +3285,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: asset
   description: "The Profile Analyzer tool supports the standard Unity Profiler. You
     can use it to analyze multiple frames and multiple data sets of the CPU data
     in the Profiler.\n\nMain features: \n\u25AA Multi-frame analysis of a single
@@ -2928,8 +3308,10 @@ m_ResolvedPackages:
     - 1.1.0-pre.2
     - 1.1.0
     - 1.1.1
+    - 1.2.2
     compatible:
     - 1.1.1
+    - 1.2.2
     verified: 1.1.1
   dependencies: []
   resolvedDependencies: []
@@ -2941,7 +3323,7 @@ m_ResolvedPackages:
     scopes: []
     isDefault: 1
     capabilities: 7
-  hideInEditor: 1
+  hideInEditor: 0
   isAssetStorePackage: 0
   datePublishedTicks: 637705021060000000
   documentationUrl: 
@@ -2968,7 +3350,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: asset
   description: Use this package to export code coverage data and reports from your
     automated tests. Additionally, the Code Coverage package offers a Coverage Recording
     feature which allows capturing coverage data on demand, for manual testing or
@@ -3002,6 +3384,10 @@ m_ResolvedPackages:
     - 1.2.0-exp.5
     - 1.2.0-exp.6
     - 1.2.0-exp.7
+    - 1.2.0
+    - 1.2.1
+    - 1.2.2
+    - 1.2.3
     compatible:
     - 1.0.1
     - 1.1.0
@@ -3013,6 +3399,10 @@ m_ResolvedPackages:
     - 1.2.0-exp.5
     - 1.2.0-exp.6
     - 1.2.0-exp.7
+    - 1.2.0
+    - 1.2.1
+    - 1.2.2
+    - 1.2.3
     verified: 1.0.1
   dependencies:
   - name: com.unity.test-framework
@@ -3042,7 +3432,7 @@ m_ResolvedPackages:
     scopes: []
     isDefault: 1
     capabilities: 7
-  hideInEditor: 1
+  hideInEditor: 0
   isAssetStorePackage: 0
   datePublishedTicks: 637594767130000000
   documentationUrl: 
@@ -3069,7 +3459,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: asset
   description: 'This package defines common components used by multiple Game Service
     packages.
 
@@ -3093,11 +3483,25 @@ m_ResolvedPackages:
     - 1.4.0
     - 1.4.1
     - 1.4.2
+    - 1.4.3
+    - 1.5.2
+    - 1.6.0
+    - 1.7.0
+    - 1.7.1
+    - 1.8.1
+    - 1.8.2
     compatible:
     - 1.4.0
     - 1.4.1
     - 1.4.2
-    verified: 1.4.2
+    - 1.4.3
+    - 1.5.2
+    - 1.6.0
+    - 1.7.0
+    - 1.7.1
+    - 1.8.1
+    - 1.8.2
+    verified: 1.4.3
   dependencies:
   - name: com.unity.modules.unitywebrequest
     version: 1.0.0
@@ -3120,7 +3524,7 @@ m_ResolvedPackages:
     scopes: []
     isDefault: 1
     capabilities: 7
-  hideInEditor: 1
+  hideInEditor: 0
   isAssetStorePackage: 0
   datePublishedTicks: 637871962570000000
   documentationUrl: 
@@ -3204,7 +3608,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: library
   description: 'Newtonsoft Json for use in Unity projects and Unity packages. Currently
     synced to version 13.0.1.
 
@@ -3232,8 +3636,14 @@ m_ResolvedPackages:
     - 2.0.2
     - 3.0.1
     - 3.0.2
+    - 3.1.0
+    - 3.2.0
+    - 3.2.1
     compatible:
     - 3.0.2
+    - 3.1.0
+    - 3.2.0
+    - 3.2.1
     verified: 3.0.2
   dependencies: []
   resolvedDependencies: []

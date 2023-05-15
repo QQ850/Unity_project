@@ -28,7 +28,7 @@ public class PlayerControler : MonoBehaviour
     private int score = 0;
 
     /*---------------------- Add timer ----------------------*/
-    public float timeRemaining = 120; //60 seconds 
+    public float timeRemaining = 240; //120 seconds, 2 mins 
     public bool timerIsRunning = false;
     public TextMeshProUGUI timeText;
 
@@ -78,11 +78,11 @@ public class PlayerControler : MonoBehaviour
                 playerRB.AddForce(Vector3.up * force, forceMode);
                 makeWaveIn = true;
             }
-            if (rightHand.pose.ToString() == "WaveOut" && !makeWaveOut)
+           /*if (rightHand.pose.ToString() == "WaveOut" && !makeWaveOut)
             {
                 playerRB.AddForce(Vector3.down * force, forceMode);
                 makeWaveOut = true;
-            }
+            }*/
 
            
         }
